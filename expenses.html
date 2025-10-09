@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expenses - ExpenseTrackerProject</title>
+</head>
+<body>
+    <h1>Expenses</h1>
+    <br>
+    <h2>Create an Expense</h2>
+    <form id = "expenseForm">
+<!--        UserId : <input type = "number" id = "userId" required><br>-->
+        Category :
+        <select id="categoryDropdown" required>
+        <option value = "">Select category</option>
+        </select><br>
+        Amount: <input type = "number" id = "expenseAmount" required><br>
+        Date: <input type = "date" id = "expenseDate" required><br>
+        Description: <input type = "text" id = "expenseDescription"><br>
+        <button type = "button" id = "createExpenseButton" onclick="createExpense()">Create An Expense</button><br>
+        <button id = "addCategoryButton" onclick="addCategory()">Add Category</button>
+    </form>
+    <pre id = "createExpense"></pre>
+
+    <h2>Get All Expenses</h2>
+        <button type = "button" id = "getAllExpensesButton">Fetch All Expenses</button>
+    <pre id = "getAllExpenses"></pre>
+
+    <h2>Get Expense By ID</h2>
+        Id: <input type = "number" id = "expenseId"></br>
+        <button type = "button" id = "getExpenseByIdButton">Fetch Expenses By Id</button>
+    <pre id = "getExpenseById"></pre>
+
+    <h2>Update Expense</h2>
+        Id: <input type = "number" id = "updateExpenseId"><br>
+        Amount: <input type = "number" id = "updateExpenseAmount"><br>
+        Date: <input type = "date" id = "updateExpenseDate"><br>
+        Description: <input type = "text" id = "updateExpenseDescription"><br>
+        <button id = "updateExpenseButton">Update Expense</button>
+    <pre id = "updateExpense"></pre>
+
+    <h2>Delete Expense</h2>
+        Id: <input type = "number" id = "deleteExpenseId"><br>
+        <button id = "deleteUserButton">Delete An Expense</button>
+    <pre id = "deleteUser"></pre>
+
+    <script src = "expenses.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Users - Expense Tracker Project</title>
+</head>
+<body>
+  <h1>Users</h1>
+  <br>
+  <h2>Create A User</h2>
+  <form id = "createUserForm">
+    Name: <input type = "text" id = "userName" required><br>
+    Email: <input type = "text" id = "userEmail" required><br>
+    <button type = "button" id = "createUserButton" onclick="createUser()">Create User</button>
+  </form>
+  <pre id = "CreateUser"></pre>
+
+  <h2>Get All Users</h2>
+    <button type = "button" id = "fetchAllUsers" onclick="fetchAllUsers()">Fetch All Users</button>
+  <pre id = "GetUser"></pre>
+
+  <h2>Get Users By ID</h2>
+    Id: <input type = "number" id = "userId" required><br>
+    <button type = "button" id = "fetchUsersById" onclick="fetchUsersByID()">Fetch Users By Id</button>
+  <pre id = "GetUserById"></pre>
+
+  <h2>Update User</h2>
+    Id: <input type = "number" id = "updateUserId" required><br>
+    Name: <input type = "text" id = "updateUserName" required><br>
+    Email: <input type = "text" id = "updateUserEmail" required><br>
+    <button type="button" id = "updateUserButton" onclick="updateUser()">Update User</button>
+    <pre id = "UpdateUser"></pre>
+
+  <h2>Delete User</h2>
+    Id: <input type = "number" id = "deleteUserId" required><br>
+    <button type = "button" id = "deleteUserButton" onclick="deleteUser()">Delete User</button>
+    <pre id = "DeleteUser"></pre>
+  <script src = "users.js"></script>
+</body>
+</html>
