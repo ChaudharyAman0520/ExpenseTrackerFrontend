@@ -6,10 +6,12 @@
 </head>
 <body>
     <h2>Register</h2>
-        Name: <input type = "text" id = "registerName" placeholder = "Email" required /><br>
+        Name: <input type = "text" id = "registerName" placeholder = "Name" required /><br>
         Email: <input type = "email" id = "registerEmail" placeholder = "Email" required /><br>
         Password: <input type = "password" id = "registerPassword" placeholder = "Password" required /><br>
-        <button type = "submit" onclick="registerUser()">Register</button>
+        <button type = "submit" onclick="sendOtp()">Register</button>
+    <input type="text" id="otp" placeholder="Enter OTP" style="display:none"/>
+    <button type="button" id="verifyBtn" style="display:none" onclick="verifyOtp()">Verify OTP</button>
     <p>Already Have An Account? <a href = "login.html">Login</a></p>
     <script src = "index.js"></script>
 </body>
