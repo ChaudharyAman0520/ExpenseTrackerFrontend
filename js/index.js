@@ -1,5 +1,7 @@
 const BASE_URL = "http://localhost:8080/api/auth";
 const OTP_URL = "http://localhost:8080/otp";
+const adminEmail = "admin123@gmail.com";
+const adminPassword = "Admin@123";
 
 async function sendOtp() {
     const name = document.getElementById("registerName").value;
@@ -66,7 +68,7 @@ async function verifyOtp() {
 
             if (registerRes.ok) {
                 alert("Successfully Registered");
-                window.location.href = "login.html";
+                window.location.href = "../html/login.html";
                 localStorage.clear();
             } else {
                 const data = await registerRes.json();
@@ -97,7 +99,7 @@ async function loginUser() {
 
         if (res.ok) {
             alert("Successful login! Redirecting...");
-            window.location.href = "Users.html";
+            window.location.href = "../html/expenses.html";
         } else {
             const data = await res.json();
             alert(data.message || "Login failed");
@@ -105,5 +107,16 @@ async function loginUser() {
     } catch (error) {
         console.error(error);
         alert("Something went wrong");
+    }
+}
+
+async function loginAdmin(){
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+    if (email===adminEmail&&password===adminPassword){
+        alert("Login Successful Redirecting...");
+        window.location.href = "../html/admindashboard.html";
+    }else{
+        alert("Login Failed Please Try Again");
     }
 }

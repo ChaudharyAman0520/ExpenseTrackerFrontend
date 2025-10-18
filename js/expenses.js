@@ -1,6 +1,6 @@
 const API_BASE = 'http://localhost:8080/api/expenses';
 const CATEGORY_API = 'http://localhost:8080/api/categories';
-const CURRENT_USER_ID = 3;
+const CURRENT_USER_ID = 4;
 async function fetchData(endpoint){
     const res = await fetch(API_BASE + endpoint);
     return res;
