@@ -98,8 +98,13 @@ async function loginUser() {
         });
 
         if (res.ok) {
-            alert("Successful login! Redirecting...");
-            window.location.href = "../html/expenses.html";
+            const data = await res.json();
+
+            // Store user details locally for session
+            localStorage.setItem("loggedInUser", JSON.stringify(data));
+
+            alert("Login successful! Redirecting...");
+            window.location.href = "../html/user_options.html"; // ✅ redirect here
         } else {
             const data = await res.json();
             alert(data.message || "Login failed");
@@ -109,6 +114,7 @@ async function loginUser() {
         alert("Something went wrong");
     }
 }
+
 
 async function loginAdmin(){
     const email = document.getElementById("loginEmail").value;
